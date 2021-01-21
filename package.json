@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "nodemon",
-    "production": "pm2 start src/loader.js --name datamob-api"
+    "production": "pm2 start src/loader.js --name datamob-api",
+    "start": "node src/loader.js"
   },
   "keywords": [],
   "author": "Murilo Mothsin <murilo.mothsin@gmail.com>",
