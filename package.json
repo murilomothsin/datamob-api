@@ -1,0 +1,24 @@
+{
+  "name": "datamob-api",
+  "version": "1.0.0",
+  "description": "Dummy API",
+  "main": "src/loader.js",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon",
+    "production": "pm2 start src/loader.js --name datamob-api"
+  },
+  "keywords": [],
+  "author": "Murilo Mothsin <murilo.mothsin@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.13",
+    "node-restful": "^0.2.6",
+    "nodemon": "^2.0.7",
+    "pm2": "^4.5.1"
+  }
+}
