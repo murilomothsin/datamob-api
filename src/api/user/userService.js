@@ -1,3 +1,4 @@
+var jwt = require("jsonwebtoken");
 const User = require('./user')
 
 User.route('login.post', function(req, res, next) {

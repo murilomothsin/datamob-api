@@ -1,7 +1,6 @@
 const restful = require('node-restful')
 const mongoose = restful.mongoose
 var bcrypt = require('bcrypt-nodejs');
-var jwt = require("jsonwebtoken");
 
 
 const userSchema = new mongoose.Schema({
