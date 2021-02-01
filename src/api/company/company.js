@@ -7,9 +7,9 @@ const companySchema = new mongoose.Schema({
     email: { type: String },
     contact: { type: String },
     phone: { type: String },
-    phone: { type: String },
     zip_code: { type: String },
     address_line: { type: String },
+    city: { type: String },
     state: { type: String },
     createdAt: { type: Date, default: Date.now }
 })
