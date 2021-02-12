@@ -24,4 +24,8 @@ module.exports = function(server) {
   // COMPANY CONSUMPTION Routes
   const ConsumptionService = require('../api/company_consumption/consumptionService')
   ConsumptionService.register(router, '/consumption')
+
+  // GROUP Routes
+  const groupService = require('../api/group/groupService')
+  groupService.register(router, '/groups')
 }
