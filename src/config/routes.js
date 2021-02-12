@@ -10,8 +10,12 @@ module.exports = function(server) {
   server.use('/api', router)
   router.use(auth);
 
-  // const seeds = require('../seeds/consumption')
-  // server.get('/seeds', seeds)
+  const seeds = require('../seeds/consumption')
+  router.get('/seeds-', seeds)
+
+  //STATES list
+  const states = require('../api/misc/state');
+  router.get('/states', states)
 
   // USERS Routes
   const userService = require('../api/user/userService')
