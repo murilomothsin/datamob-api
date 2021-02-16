@@ -32,4 +32,8 @@ module.exports = function(server) {
   // GROUP Routes
   const groupService = require('../api/group/groupService')
   groupService.register(router, '/groups')
+
+  // ADMIN USERS Routes
+  const adminUserService = require('../api/admin_user/adminUserService')
+  adminUserService.register(router, '/adminUsers')
 }
