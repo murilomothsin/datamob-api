@@ -4,7 +4,7 @@ const mongoose = restful.mongoose
 const companySchema = new mongoose.Schema({
     name: { type: String },
     identification: { type: String },
-    email: { type: String },
+    email: { type: String, required: true },
     contact: { type: String },
     phone: { type: String },
     zip_code: { type: String },
