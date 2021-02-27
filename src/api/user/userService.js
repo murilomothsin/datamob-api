@@ -2,6 +2,17 @@ var jwt = require("jsonwebtoken");
 const User = require('./user')
 
 User.route('login.post', function(req, res, next) {
+
+  if(req.body.email === 'warning@test.com') {
+    res.status(400).json({ type: false, data: "user_last_try" });
+    return ;
+  }
+
+  if(req.body.email === 'error@test.com') {
+    res.status(400).json({ type: false, data: "user_blocked" });
+    return ;
+  }
+
   User.findOne({ email: req.body.email }, function (err, user) {
     if (err) {
       res.status(500).json({ type: false, data: "Error occured: " + err });
