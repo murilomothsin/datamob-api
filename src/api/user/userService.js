@@ -20,20 +20,20 @@ User.route('login.post', function(req, res, next) {
     }
     // No user found with that username
     if (!user) {
-      res.status(400).json({ type: false, data: "Invalid email/password." });
+      res.status(400).json({ type: false, data: "invalid_user_password" });
       return ;
     }
 
     // Make sure the password is correct
     user.verifyPassword(req.body.password, function(err, isMatch) {
       if (err) {
-        res.status(400).json({ type: false, data: "Invalid email/password." });
+        res.status(400).json({ type: false, data: "invalid_user_password" });
         return ;
       }
 
       // Password did not match
       if (!isMatch) {
-        res.status(400).json({ type: false, data: "Invalid email/password." });
+        res.status(400).json({ type: false, data: "invalid_user_password" });
         return ;
       }
 

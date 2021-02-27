@@ -31,6 +31,42 @@ RESPONSE
   }
 ```
 
+#### Para testar estados de erro de LOGIN
+
+`Aviso de tentativas de Login`
+
+BODY
+``` json
+{
+  "email": "warning@test.com",
+  "password": "1234"
+}
+```
+RESPONSE
+``` json
+{
+  "type": false,
+  "data": "user_last_try"
+  }
+```
+
+`Usuário bloqueado`
+
+BODY
+``` json
+{
+  "email": "error@test.com",
+  "password": "1234"
+}
+```
+RESPONSE
+``` json
+{
+  "type": false,
+  "data": "user_blocked"
+  }
+```
+
 ### POST /users
 
 `Criação de usuário`
